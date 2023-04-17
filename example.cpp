@@ -32,6 +32,7 @@ int main() {
 		vector<ChordData> chords = chord_manager.GetChords();
 		int key = chord_manager.EstimateKey();
 		for (auto itr = chords.begin(); itr != chords.end(); itr++){
+			// transpose key to C major
 			if (itr->root - key < 0){
 				itr->root = itr->root + 12 - key;
 			}
